@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head>
+</head><body>
+
+<canvas id="canvas" width="640" height="480">WebGL tidak didukung</canvas>
+
+<script type="text/javascript">
+
+var canvas = document.getElementById('canvas');
+
+var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+
+if (!gl) {
+  alert('WebGL tidak didukung');
+}
+
+if (gl) {
+  // hapus layar
+  gl.clearColor(1.0, 0.5, 0.0, 1.0); // warna kuning
+  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+}
+
+</script>
+</body></html>
